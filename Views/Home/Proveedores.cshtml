@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Corredores.Proveedores>
+
+@{
+    ViewBag.Title = "Proveedores";
+}
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RUT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dirección)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Teléfono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Web)
+        </th>
+        <th></th>
+    </tr>
+
+
+</table>

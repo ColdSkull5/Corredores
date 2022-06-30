@@ -1,0 +1,48 @@
+﻿@model Corredores.Clientes
+
+@{
+    ViewBag.Title = "Borrar cliente";
+}
+
+<h2>Eliminar cliente</h2>
+
+<h3>Está seguro de eliminar este cliente?</h3>
+<div>
+    <h4>Clientes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dirección)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dirección)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Teléfono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Teléfono)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Volver atrás", "Index")
+        </div>
+    }
+</div>
